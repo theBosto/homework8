@@ -3,6 +3,10 @@
     width: 300px;
     height: 300px;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: pink;
 }
 
 button {
@@ -14,17 +18,14 @@ button {
     font-size: 30px;
     cursor: pointer;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px #000;
-    text-shadow: 5px 5px 10px black;
-}
-
-button:hover {
-    box-shadow: 10px 10px 10px #000;
+    box-shadow: 5px 5px 5px #000, inset 5px 5px 5px #fff;
+    box-shadow: 5px 5px 5px #000, inset 5px 5px 5px #fff;
 }
   
 button:active {
+    box-shadow: inset 5px 5px 5px #000, inset -5px -5px 5px #fff;
     box-shadow: inset 2px 2px 10px #000;
-    text-shadow: none;
+
 }
 
 /* task 2  */
@@ -32,12 +33,15 @@ button:active {
 .mountain {
     width: 300px;
     height: 300px;
+    transition: 0.5s linear;
 }
 
 .card {
     width: 300px;
     height: 350px;
-    margin-left: 70px;
+    margin: 100px 0 100px 70px;
+    padding: 20px;
+    transition: 0.5s linear;
 }
 figcaption {
     font-size: 20px;
@@ -46,11 +50,13 @@ figcaption {
 }
 
 .card:hover {
-    box-shadow: 50px 50px 1px aqua,
-                -50px -50px 1px aqua;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    box-shadow: 0 0 20px 10px aqua;
+    border-radius: 30px;
                 
+}
+
+.card:hover .mountain {
+    border-radius: 20px 20px 0 0;
 }
 .mountain:hover {
     border-top-right-radius: 10px;
@@ -68,7 +74,7 @@ figcaption {
     animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes on_off {
+@keyframes on_off {
     from {
         color: white;
     }
@@ -79,12 +85,28 @@ figcaption {
 
 /* task 4  */
 
-.spinner {
+.spinner_container {
     width: 300px;
     height: 300px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.spinner_text {
+    font-size: 30px;
+    color: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.spinner {
+    width: 100%;
+    height: 100%;
     color: rgb(71, 29, 29);
     font-size: 45px;
-    margin-inline: 300px;
     border-bottom: 20px solid red;
     border-top: 20px solid blue;
     border-left: 20px solid green;
@@ -96,7 +118,7 @@ figcaption {
     animation-timing-function: linear;
 }
 
-@-webkit-keyframes around {
+@keyframes around {
     from {
         rotate: 0deg;
     }
@@ -106,7 +128,7 @@ figcaption {
 }
 
 .spinner:hover {
-    animation-duration: 0s;
+    animation-play-state: paused;
 }
 
 /* task 5  */
@@ -119,6 +141,7 @@ header {
 .header_ul {
     display: flex;
     gap: 33px;
+    justify-content: center;
     
 }
 
@@ -126,6 +149,8 @@ header {
     list-style-type: none;
     font-size: 50px;
     text-shadow: 2px 2px 5px black;
+    transition: 1s;
+    cursor: pointer;
 }
 
 .header_li:hover {
@@ -137,7 +162,6 @@ header {
                 0 0 92px purple,
                 0 0 102px purple,
                 0 0 151px purple;
-    transition: 1s;             
 }
 
 /* task 6  */
