@@ -37,9 +37,9 @@ button:active {
 }
 
 .card {
-    width: 300px;
+    width: 350px;
     height: 350px;
-    margin: 100px 0 100px 70px;
+    margin: 20px 70px;
     padding: 20px;
     transition: 0.5s linear;
 }
@@ -56,11 +56,7 @@ figcaption {
 }
 
 .card:hover .mountain {
-    border-radius: 20px 20px 0 0;
-}
-.mountain:hover {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-radius: 30px;
 }
 
 /* task 3  */
