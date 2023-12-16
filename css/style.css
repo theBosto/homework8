@@ -163,14 +163,41 @@ header {
 /* task 6  */
 
 .loading {
-    width: 1000px;
+    width: 70%;
     height: 50px;
-    margin: auto;
+    margin: 50px auto;
     border: 5px solid black;
     border-radius: 30px;
-    animation-name: loading;
-    animation-duration: 5s;
-    animation-timing-function: linear;
+    position: relative;
+
+}
+
+.loading_fill {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background-color: red;
+    animation: loading 3s linear forwards;
+}
+
+h2 {
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+        opacity: 0.1;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 
